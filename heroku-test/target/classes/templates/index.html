@@ -5,7 +5,13 @@
     </head>
 
     <body>
-        <h1 th:text="${teksti}"></h1>
-     
+        <h1 th:text="${header}"></h1>
+     	
+     	<div>
+     	  <h2>Page loaded: </h2>
+          <span th:text="${counter}"></span>
+          <span> times</span>
+     	</div>
+
     </body>
 </html>
