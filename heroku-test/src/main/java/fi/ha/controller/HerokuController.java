@@ -19,10 +19,12 @@ public class HerokuController {
     public String home(Model model, HttpServletRequest request, HttpServletResponse response) {
         
 		String cookie = "";
-		for (Cookie c : Arrays.asList(request.getCookies())) {
-			if (c.getName().equals(MYCOOKIE)) {
-				cookie = c.getValue();
-				break;
+		if (request.getCookies() != null) {
+			for (Cookie c : Arrays.asList(request.getCookies())) {
+				if (c.getName().equals(MYCOOKIE)) {
+					cookie = c.getValue();
+					break;
+				}
 			}
 		}
 
